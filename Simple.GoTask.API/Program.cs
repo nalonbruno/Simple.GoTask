@@ -1,3 +1,4 @@
+using Simple.GoTask.API.Extension;
 using Simple.GoTask.Application.Services;
 using Simple.GoTask.Persistence;
 using Simple.GoTask.Persistence.Context;
@@ -8,6 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.ConfigurePersistenceApp(builder.Configuration);
 builder.Services.ConfigureApplicationApp();
+builder.Services.ConfigureCorsPolicy();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -35,6 +37,8 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+
+app.UseCors();
 
 app.MapControllers();
 

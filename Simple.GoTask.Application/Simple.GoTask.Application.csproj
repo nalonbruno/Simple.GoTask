@@ -12,9 +12,6 @@
 
   <ItemGroup>
     <Folder Include="Shared\Exceptions\" />
-    <Folder Include="UseCases\DeleteTaskItem\" />
-    <Folder Include="UseCases\GetAllTaskItem\" />
-    <Folder Include="UseCases\UpdateTaskItem\" />
   </ItemGroup>
 
   <ItemGroup>
